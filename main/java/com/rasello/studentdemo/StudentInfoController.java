@@ -12,12 +12,12 @@ public class StudentInfoController {
        StudentData data = new StudentData();
         data.setName("Rabina");
         data.setAddress("Bhaktapur");
-        data.setId("oo1");
+        data.setId("25254");
         data.setMark(80.5);
         return data;
     }
 
-    @PostMapping("/student/add")
+    @PostMapping("/student/data")
     public Response<StudentData> createStudent(@RequestBody StudentData data){
         return new Response<>(true, "Student  added", data);
     }
