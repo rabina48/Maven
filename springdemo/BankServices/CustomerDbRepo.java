@@ -107,8 +107,6 @@ public class CustomerDbRepo implements CustomersRepository {
 
     }
 
-
-
     @Override
     public CustomersInfo getById(long checkId) {
         try {
@@ -118,15 +116,9 @@ public class CustomerDbRepo implements CustomersRepository {
             Class.forName(myDriver);
             Connection connection = DriverManager.getConnection(myUrl, "postgres", "postgres");
 
-
-
             String query = "SELECT * FROM customerinfo where checkid =checkId";
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery(query);
-            
-
-
-
 
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println("Got an exception! ");
@@ -134,7 +126,7 @@ public class CustomerDbRepo implements CustomersRepository {
             e.printStackTrace();
         }
 
-return null;
+return null ;
     }
 
 
